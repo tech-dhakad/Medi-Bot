@@ -1,0 +1,136 @@
+/* style.css */
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff00dd, #1e00ff);
+    color: white;
+    text-align: center;
+    transition: background 0.5s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    transition: background 0.3s ease, padding 0.3s;
+}
+
+.logo img {
+    width: 150px;
+    height:auto ;
+    transition: transform 0.3s ease-in-out, filter 0.3s;
+}
+.logo img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a, select {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+ul li a:hover, select:hover {
+    background: rgb(0, 0, 0);
+    color: hsl(0, 0%, 99%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 100px;
+}
+main img[src*="logo.png"] {
+    margin: 50px;
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Maintain aspect ratio */
+}
+main img[src*="logo.png"]:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+p {
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+input {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+
+footer {
+    color: hsl(0, 0%, 0%);
+    padding: 10px;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    z-index: 1000;
+}
